@@ -85,6 +85,47 @@ async function addTask(event) {
     }
 }
 
+// UPDATE: Toggle task completion status
+async function updateTask(id, currentStatus) {
+    try {
+        const response = await fetch(`${state.supabaseUrl}/rest/v1/${state.tableName}?id=eq.${id}`, {
+            method: 'PATCH',
+            headers: getHeaders(),
+            body: JSON.stringify({ completed: !currentStatus })
+        });
+        
+        if (!response.ok) throw new Error('Failed to update task');
+        
+        showStatus('Task updated successfully!');
+        await fetchTasks(); // Refresh the list to show the new status
+        
+    } catch (error) {
+        showStatus('Error updating task.', true);
+        console.error(error);
+    }
+}
+
+// DELETE: Remove a task completely
+async function deleteTask(id) {
+    if (!confirm("Are you sure you want to delete this task?")) return;
+
+    try {
+        const response = await fetch(`${state.supabaseUrl}/rest/v1/${state.tableName}?id=eq.${id}`, {
+            method: 'DELETE',
+            headers: getHeaders()
+        });
+        
+        if (!response.ok) throw new Error('Failed to delete task');
+        
+        showStatus('Task deleted!');
+        await fetchTasks(); // Refresh the list to remove the deleted task
+        
+    } catch (error) {
+        showStatus('Error deleting task.', true);
+        console.error(error);
+    }
+}
+
 // --- UI Rendering ---
 
 function renderTasks(tasks) {
@@ -101,6 +142,8 @@ function renderTasks(tasks) {
             <h3>${task.title}</h3>
             <p>${task.description || 'No description'}</p>
             <p><strong>Status:</strong> ${task.completed ? 'Completed' : 'Pending'}</p>
+            <button onclick="updateTask(${task.id}, ${task.completed})">Toggle Status</button>
+            <button onclick="deleteTask(${task.id})" style="color: red; margin-left: 10px;">Delete</button>
         `;
         taskList.appendChild(taskElement);
     });
