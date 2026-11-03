@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+</head>
+<body>
+    <!-- A. Page heading -->
+    <h1>Task Manager</h1>
+    <p>Student ID: <span id="student-id">72011</span></p>
+
+    <!-- B. Task form -->
+    <form id="task-form">
+        <input type="text" id="task-title" placeholder="Task Title" required>
+        <input type="text" id="task-description" placeholder="Task Description">
+        <button type="submit" id="task-submit">Save Task</button>
+    </form>
+
+    <!-- Status Message -->
+    <div id="status-message"></div>
+
+    <!-- C. Task list -->
+    <div id="task-list">
+        <!-- Tasks will be injected here by JavaScript -->
+    </div>
+
+    <!-- D. Additional elements -->
+    <br>
+    <a href="contribution.html" id="contribution-link">View Team Contribution</a>
+
+    <!-- Link to your JavaScript logic -->
+    <script src="app.js"></script>
+</body>
+</html>

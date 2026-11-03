@@ -1,0 +1,10 @@
+# VS Code settings
+.vscode/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Configuration file (Optional)
+# Uncomment the line below if you want to hide your API keys from GitHub
+# config.json
