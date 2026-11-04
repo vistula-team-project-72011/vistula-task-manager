@@ -42,4 +42,4 @@ This project enforces a strict repository collaboration model:
 1.  **Forking:** Collaborators must fork this repository.
 2.  **Feature Branches:** Contributions are made on isolated branches (e.g., `feature/team-contribution`).
 3.  **Pull Requests:** Modifications (such as adding the required `contribution.json` and `contribution.html`) are submitted via Pull Requests targeting the `main` branch.
-4.  **Review & Merge:** The repository owner independently reviews and merges the incoming changes to complete the integration.
+4.  **Review & Merge:** The repository owner independently reviews and merges the incoming changes to complete the integration. 
