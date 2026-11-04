@@ -8,6 +8,13 @@ A web-based task management application developed for the Practical Assignment 1
 
 *(Deployed via GitHub Pages)*
 
+## 🔗 Collaboration Verification
+
+The following merged Pull Requests fulfill the team collaboration requirement[cite: 16]:
+
+*   **My contribution to partner (73799):** [View Pull Request](https://github.com/vistula-team-project-73799/vistula-task-manager/pull/2)
+*   **Partner's contribution to my repository:** [View Pull Request](https://github.com/vistula-team-project-72011/vistula-task-manager/pull/1)
+
 ## ✨ Features
 
 *   **Task Management:** Core functionality to add, update, and delete tasks dynamically using JavaScript.
