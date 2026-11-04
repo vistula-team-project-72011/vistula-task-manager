@@ -10,7 +10,7 @@ A web-based task management application developed for the Practical Assignment 1
 
 ## 🔗 Collaboration Verification
 
-The following merged Pull Requests fulfill the team collaboration requirement[cite: 16]:
+The following merged Pull Requests fulfill the team collaboration requirement:
 
 *   **My contribution to partner (73799):** [View Pull Request](https://github.com/vistula-team-project-73799/vistula-task-manager/pull/2)
 *   **Partner's contribution to my repository:** [View Pull Request](https://github.com/vistula-team-project-72011/vistula-task-manager/pull/1)
